@@ -86,12 +86,12 @@ fi
 echo
 echo "Creating a new project..."
 echo
-oc new-project rhcs-vacation-request-demo 
+oc new-project rhcs-vacation-demo 
 						
 echo
 echo "Setting up a new build..."
 echo
-oc new-build "jbossdemocentral/developer" --name=rhcs-vacation-request-demo --binary=true
+oc new-build "jbossdemocentral/developer" --name=rhcs-vacation-demo --binary=true
 						
 if [ $? -ne 0 ]; then
 	echo
@@ -113,7 +113,7 @@ fi
 echo
 echo "Starting a build, this takes some time to upload all of the product sources for build..."
 echo
-oc start-build rhcs-vacation-request-demo --from-dir=. --follow=true
+oc start-build rhcs-vacation-demo --from-dir=. --follow=true
 																		
 if [ $? -ne 0 ]; then
 	echo
@@ -124,7 +124,7 @@ fi
 echo
 echo "Creating a new application..."
 echo
-oc new-app rhcs-vacation-request-demo
+oc new-app rhcs-vacation-demo
 																								
 if [ $? -ne 0 ]; then
 	echo
@@ -135,7 +135,7 @@ fi
 echo
 echo "Creating an externally facing route by exposing a service..."
 echo
-oc expose service rhcs-vacation-request-demo --hostname=rhcs-vacation-demo.10.1.2.2.xip.io
+oc expose service rhcs-vacation-demo --hostname=rhcs-vacation-demo.10.1.2.2.xip.io
 																														
 if [ $? -ne 0 ]; then
 	echo
