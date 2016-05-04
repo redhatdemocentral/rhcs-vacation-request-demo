@@ -60,7 +60,7 @@ Submitting a Vacation Request
 
 4. If it's more than 10, it will be routed to the manager
 
-5. If the manager does not claim/complete the task within 30 seconds, it is routed to `joe`
+5. If user erics does not claim/complete the task within 30 seconds, it is routed back into the `manager` group
 
 6. Check the box to approve or not approve the vacation request
 
