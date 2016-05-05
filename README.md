@@ -79,7 +79,7 @@ The REST Service API can be queried to show:
 
 Supporting Articles
 -------------------
-coming soon...
+- [3 Ways to Empower Employee Vacation Request Process](http://www.schabell.org/2016/05/3-ways-empower-employee-vacation-request-process.html)
 
 
 Released versions
