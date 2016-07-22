@@ -6,6 +6,8 @@ set DEMO=Cloud JBoss Vacation Request Demo
 set AUTHORS=Kent Hua, Eric D. Schabell
 set PROJECT=git@github.com:redhatdemocentral/rhcs-vacation-request-demo.git
 set SRC_DIR=%PROJECT_HOME%installs
+set OPENSHIFT_USER=openshift-dev
+set OPENSHIFT_PWD=devel
 set WEBSERVICE=vacation.war
 set BPMS=jboss-bpmsuite-installer-6.2.0.BZ-1299002.jar
 set EAP=jboss-eap-6.4.0-installer.jar
@@ -80,9 +82,9 @@ if exist %SRC_DIR%\%BPMS% (
 
 echo OpenShift commandline tooling is installed...
 echo.
-echo Loging into OSE...
+echo Logging in to OSE as %OPENSHIFT_USER%...
 echo.
-call oc login 10.1.2.2:8443 --password=admin --username=admin
+call oc login 10.1.2.2:8443 --password="%OPENSHIFT_PWD%" --username="%OPENSHIFT_USER%"
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
