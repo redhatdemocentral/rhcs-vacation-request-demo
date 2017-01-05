@@ -96,4 +96,5 @@ See the tagged releases for the following versions of the product:
 
 ![Vacation Process](https://github.com/redhatdemocentral/rhcs-vacation-request-demo/blob/master/docs/demo-images/process.png?raw=true)
 
+![Cloud Suite](https://github.com/redhatdemocentral/rhcs-vacation-request-demo/blob/master/docs/demo-images/rhcs-arch.png?raw=true)
 
