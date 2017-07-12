@@ -39,6 +39,16 @@ Install on Red Hat CDK OpenShift Enterprise image
 
 Notes
 -----
+This project can be installed on any OpenShift platform, such as OpenShift Container Platform.
+It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
+
+```
+  $ ./init.sh IP
+```
+
+If for any reason the installation breaks or you want a new JBoss BRMS installation, just remove the project rhcs-bpms-install-demo
+entry in the OpenShift console and re-run the installation.
+
 Should your local network DNS not handle the resolution of the above address, giving you page not found errors, you can apply the
 following to your local hosts file:
 
@@ -46,8 +56,9 @@ following to your local hosts file:
 $ sudo vi /etc/hosts
 
 # add host for CDK demo resolution.
-10.1.2.2   rhcs-vacation-demo.10.1.2.2.xip.io    rhcs-vacation-demo.10.1.2.2.xip.io
+192.168.99.100   rhcs-vacation-demo.192.168.99.100.xip.io
 ```
+
 
 
 Submitting a Vacation Request
