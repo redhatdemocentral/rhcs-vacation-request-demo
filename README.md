@@ -86,6 +86,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.3 - JBoss BPM Suite 6.4.0 and JBoss EAP 7.0.0 with vacation request process installed on any given OpenShift installation and loading mulitple projects.
+
 - v1.2 - JBoss BPM Suite 6.3.0 and JBoss EAP 6.4.7 with vacation request installed on Red Hat CDK.
 
 - v1.1 - JBoss BPM Suite 6.2.0-BZ-1299002 on JBoss EAP 6.4.4 with vacation request installed on Red Hat CDK.
