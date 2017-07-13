@@ -1,15 +1,3 @@
 # pack-refs with: peeled
-9895bf14d19a49f91c8f41b9ecdbed60f32ff8be refs/heads/alice-uf-user
-75a0ccd5e2107878cb5c83e3531339432c9381af refs/heads/bpmsAdmin-uf-user
-6e0a4da320cb87fe3ba50c42932ec235dd1cfd47 refs/heads/brmsAdmin-uf-user
-3d6fd51184e70f74482e35ee3ea3aca7d0506a62 refs/heads/erics-uf-user
-f0a396acd1ae40402b55a2a28fe7a48c5bcbc3eb refs/heads/jack-uf-user
-12691b3b540c7f560c3e4def9aad05ec838db120 refs/heads/jane-uf-user
-9d711161df8e01396db1856933d219f4767cc83c refs/heads/joe-uf-user
-57bb4e492de1c0c0f10cac70db360e0c97462858 refs/heads/john-uf-user
-7fc4ac45b0a291656a914cccd8e5a5eb4a4d738a refs/heads/kent-uf-user
-ccc1a0be71de39ada505abc709701cd49a0083bd refs/heads/locks
-5edea4976c403ab0668ff9684c44c89c7940a2d1 refs/heads/mailman-uf-user
-51998afcdb158ab12b5f530563f1ac76ed35a323 refs/heads/master
-ad87c1d70a7a662661ff05f74d0546832f26159d refs/heads/social
-c98cc464e92023208123ad63b8c495999d16b9a4 refs/heads/system-uf-user
+eb1b8b2041f46613ae22dbb181927aec1e2f975a refs/heads/master
+98fbd0490f13646fdb1f9cf5ce38588741278032 refs/heads/social
