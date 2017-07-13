@@ -31,30 +31,29 @@ RUN sed -i "s:<installpath>.*</installpath>:<installpath>$BPMS_HOME</installpath
     && unzip -qo /opt/jboss/$BPMS_DEPLOYABLE  -d $BPMS_HOME/.. \
     && /opt/jboss/fix-permissions $BPMS_HOME \
     && rm -rf /opt/jboss/$BPMS_DEPLOYABLE /opt/jboss/$EAP_INSTALLER /opt/jboss/installation-eap /opt/jboss/installation-eap.variables $BPMS_HOME/standalone/configuration/standalone_xml_history/ \
-    && $BPMS_HOME/bin/add-user.sh -a -r ApplicationRealm -u erics -p bpmsuite1! -ro analyst,admin,appraiser,broker,manager,user,kie-server,kiemgmt,rest-all --silent \
-    && mkdir -p /opt/jboss/.security
+    && $BPMS_HOME/bin/add-user.sh -a -r ApplicationRealm -u erics -p bpmsuite1! -ro analyst,admin,appraiser,broker,manager,user,kie-server,kiemgmt,rest-all --silent 
 
 # Copy demo and support files
 COPY support/bpm-suite-demo-niogit $BPMS_HOME/bin/.niogit
 COPY projects /opt/jboss/bpms-projects
 COPY support/userinfo.properties $BPMS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/
 COPY support/standalone.xml $BPMS_HOME/standalone/configuration/
+COPY support/start.sh /opt/jboss/
 
 # Run Demo Maven build and cleanup
 RUN mvn clean install -f /opt/jboss/bpms-projects/vacation/pom.xml \
   && cp -r /opt/jboss/bpms-projects/vacation/target/vacation.war $BPMS_HOME/standalone/deployments/ \
-  && rm -rf ~/.m2/repository /opt/jboss/bpms-projects  
-
-# Fix permissions on support files
-RUN chown -R 1000:root $BPMS_HOME \
+  && chown -R 1000:root $BPMS_HOME \
   && /opt/jboss/fix-permissions $BPMS_HOME/bin/.niogit \
   && /opt/jboss/fix-permissions $BPMS_HOME/standalone/deployments/vacation.war \
   && /opt/jboss/fix-permissions $BPMS_HOME/standalone/configuration/standalone.xml \
   && /opt/jboss/fix-permissions $BPMS_HOME/standalone/deployments/business-central.war/WEB-INF/classes/userinfo.properties \
   && /opt/jboss/fix-permissions /etc/passwd \
   && /opt/jboss/fix-permissions /etc/group \
+  && /opt/jboss/fix-permissions /opt/jboss/start.sh \
   && /opt/jboss/fix-permissions /opt/jboss/.m2 \
-  && /opt/jboss/fix-permissions /opt/jboss/.security
+  && rm -rf /opt/jboss/bpms-projects \
+  && chmod +x /opt/jboss/start.sh
 
 # Run as JBoss 
 USER 1000
@@ -62,6 +61,5 @@ USER 1000
 # Expose Ports
 EXPOSE 9990 9999 8080 9418 8001
 
-# Run BPMS
-CMD ["/opt/jboss/bpms/jboss-eap-7.0/bin/standalone.sh","-c","standalone.xml","-b", "0.0.0.0","-bmanagement","0.0.0.0"]
-
+# Helper script
+ENTRYPOINT ["/opt/jboss/start.sh"]

@@ -129,7 +129,7 @@ echo "OpenShift commandline tooling is installed..."
 echo 
 echo "Logging in to OpenShift as $OPENSHIFT_USER..."
 echo
-oc login "$HOST_IP:8443" --password="$OPENSHIFT_PWD" --username="$OPENSHIFT_USER"
+oc login $HOST_IP:8443 --password=$OPENSHIFT_PWD --username=$OPENSHIFT_USER
 
 if [ "$?" -ne "0" ]; then
 	echo
@@ -140,7 +140,7 @@ fi
 echo
 echo "Creating a new project..."
 echo
-oc new-project "$OCP_PRJ"
+oc new-project $OCP_PRJ
 						
 echo
 echo "Setting up a new build..."
@@ -148,7 +148,7 @@ echo
 oc delete bc "$OCP_APP" -n "$OCP_PRJ" >/dev/null 2>&1
 oc delete imagestreams "developer" >/dev/null 2>&1
 oc delete imagestreams "$OCP_APP" >/dev/null 2>&1
-oc new-build "jbossdemocentral/developer" --name="$OCP_APP" --binary=true
+oc new-build "jbossdemocentral/developer" --name=$OCP_APP --binary=true
 						
 if [ "$?" -ne "0" ]; then
 	echo
@@ -173,7 +173,7 @@ fi
 echo
 echo "Starting a build, this takes some time to upload all of the product sources for build..."
 echo
-oc start-build "$OCP_APP" --from-dir=. --follow=true --wait=true
+oc start-build $OCP_APP --from-dir=. --follow=true --wait=true
 																		
 if [ "$?" -ne "0" ]; then
 	echo
@@ -184,7 +184,7 @@ fi
 echo
 echo "Creating a new application..."
 echo
-oc new-app "$OCP_APP"
+oc new-app $OCP_APP
 																								
 if [ "$?" -ne "0" ]; then
 	echo
@@ -195,7 +195,7 @@ fi
 echo
 echo "Creating an externally facing route by exposing a service..."
 echo
-oc expose service "$OCP_APP" --hostname="$OCP_APP.$HOST_IP.xip.io"
+oc expose service $OCP_APP --hostname=$OCP_APP.$HOST_IP.xip.io
 																														
 if [ "$?" -ne "0" ]; then
 	echo
