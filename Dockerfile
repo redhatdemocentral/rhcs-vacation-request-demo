@@ -52,6 +52,8 @@ RUN mvn clean install -f /opt/jboss/bpms-projects/vacation/pom.xml \
   && /opt/jboss/fix-permissions /etc/group \
   && /opt/jboss/fix-permissions /opt/jboss/start.sh \
   && /opt/jboss/fix-permissions /opt/jboss/.m2 \
+  && mkdir -p /opt/jboss/.security \
+  && /opt/jboss/fix-permissions /opt/jboss/.security \
   && rm -rf /opt/jboss/bpms-projects \
   && chmod +x /opt/jboss/start.sh
 
