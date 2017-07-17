@@ -97,6 +97,8 @@ The REST Service API can be queried to show:
 
   [DATA] `{"associateId":"1","hours":-300}`
 
+-----
+
 
 Supporting Articles
 -------------------
