@@ -136,7 +136,7 @@ if not "%ERRORLEVEL%" == "0" (
 )
 
 REM need to wait a bit for new build to finish with developer image.
-timeout 3 /nobreak
+timeout 10 /nobreak
 
 echo.
 echo Importing developer image...
@@ -177,7 +177,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating an externally facing route by exposing a service...
 echo.
-call oc expose service %OCP_APP% --hostname=%OCP_APP%.%HOST_IP%.xip.io
+call oc expose service %OCP_APP% --hostname=%OCP_APP%.%HOST_IP%.xip.io --port=8080-tcp
 
 if not "%ERRORLEVEL%" == "0" (
   echo.

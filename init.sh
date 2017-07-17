@@ -157,7 +157,7 @@ if [ "$?" -ne "0" ]; then
 fi
 												
 # need to wait a bit for new build to finish with developer image.
-sleep 3 
+sleep 10 
 
 echo
 echo "Importing developer image..."
@@ -195,7 +195,7 @@ fi
 echo
 echo "Creating an externally facing route by exposing a service..."
 echo
-oc expose service $OCP_APP --hostname=$OCP_APP.$HOST_IP.xip.io
+oc expose service $OCP_APP --hostname=$OCP_APP.$HOST_IP.xip.io --port=8080-tcp
 																														
 if [ "$?" -ne "0" ]; then
 	echo
