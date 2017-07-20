@@ -102,6 +102,8 @@ The REST Service API can be queried to show:
 
 Supporting Articles
 -------------------
+- [How to Optimize Existing IT by Modernizing HR Processes](http://www.schabell.org/2017/07/how-to-optimize-existing-it-modernizing-hr-processes.html)
+
 - [3 Ways to Empower Employee Vacation Request Process](http://www.schabell.org/2016/05/3-ways-empower-employee-vacation-request-process.html)
 
 
