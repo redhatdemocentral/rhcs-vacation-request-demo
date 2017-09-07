@@ -193,7 +193,7 @@ echo =  Login to start exploring the Travel Agency project:                     
 echo =                                                                                =
 echo =    http://%OCP_APP%.%HOST_IP%.xip.io/business-central            =
 echo =                                                                                =
-echo =    [ u:erics / p:jbossbrms1! ]                                                 =
+echo =    [ u:erics / p:bpmsuite1! ]                                                 =
 echo =                                                                                =
 echo =  Note: it takes a few minutes to expose the service...                         =
 echo =                                                                                =
