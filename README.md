@@ -1,7 +1,6 @@
 App Dev Cloud with JBoss Vacation Request Demo
 ==============================================
-This demo is to install JBoss BPM Suite Vacation Request Demo in the Cloud based on leveraging the OpenShift Container Platform
-(OCP). It delivers a fully functioning Generic Loan example containerized on OCP.
+This demo is to install JBoss BPM Suite based vacation request application in the Cloud based on leveraging the OpenShift Container Platform (OCP). It delivers a fully functioning HR employee vacation request example containerized on OCP.
 
 This is a simple vacation request process project for employees to request PTO / Vacation days. It demonstrates the following
 functionality:
