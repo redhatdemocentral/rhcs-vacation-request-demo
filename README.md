@@ -29,6 +29,7 @@ Install on OpenShift (OCP)
 3. Download JBoss EAP & JBoss BPM Suite, add to installs directory (see installs/README).
 
 4. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges:
+
 ```
    # The installation needs to be pointed to a running version
    # of OpenShift, so pass an IP address such as:
