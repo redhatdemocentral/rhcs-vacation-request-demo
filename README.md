@@ -16,7 +16,7 @@ This is a vacation process example which calls out to a REST service to get vaca
 
 Install on OpenShift (OCP)
 --------------------------
-1. First ensure you have an OpenShift container based installation, such as one of the followling installed first:
+1. (OPTIONAL) First ensure you have an OpenShift container based installation, such as one of the followling installed first:
 
     - [OCP Install Demo](https://github.com/redhatdemocentral/ocp-install-demo)
 
