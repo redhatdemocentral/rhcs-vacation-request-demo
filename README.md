@@ -1,3 +1,6 @@
+Update: June 2018 moved to [Gitlab](https://gitlab.com/redhatdemocentral/rhcs-vacation-request-demo).
+
+
 App Dev Cloud with JBoss Vacation Request Demo
 ==============================================
 This demo is to install JBoss BPM Suite based vacation request application in the Cloud based on leveraging the OpenShift Container Platform (OCP). It delivers a fully functioning HR employee vacation request example containerized on OCP.
